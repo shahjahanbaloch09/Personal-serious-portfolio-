@@ -1,0 +1,55 @@
+import React from 'react';
+import Section from './Section.tsx';
+import useIntersectionObserver from '../hooks/useIntersectionObserver.ts';
+import { EducationIcon, HealthIcon, TechIcon } from './icons/FeatureIcons.tsx';
+
+const About: React.FC = () => {
+  const [ref, isVisible] = useIntersectionObserver<HTMLDivElement>({ threshold: 0.2 });
+
+  return (
+    <Section id="about" title="About Me" subtitle="A little bit about my journey and what drives me.">
+      <div ref={ref} className="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+        <div className={`w-full md:w-1/3 flex justify-center items-center transition-all duration-700 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
+          <div className="relative w-64 h-64 lg:w-80 lg:h-80">
+             <img
+              src="https://picsum.photos/seed/shahjahan/400/400"
+              alt="Shah Jahan Baloch"
+              className="rounded-full shadow-2xl border-8 border-white object-cover w-full h-full"
+            />
+            <div 
+              className="absolute -top-4 -left-4 w-20 h-20 bg-white/80 backdrop-blur-md rounded-full flex items-center justify-center shadow-lg animate-jump"
+              style={{ animationDelay: '0s' }}
+            >
+              <EducationIcon className="w-10 h-10 text-brand-blue-600" />
+            </div>
+            <div 
+              className="absolute -top-4 -right-4 w-20 h-20 bg-white/80 backdrop-blur-md rounded-full flex items-center justify-center shadow-lg animate-jump"
+              style={{ animationDelay: '0.5s' }}
+            >
+              <HealthIcon className="w-10 h-10 text-brand-orange-600" />
+            </div>
+            <div 
+              className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-20 h-20 bg-white/80 backdrop-blur-md rounded-full flex items-center justify-center shadow-lg animate-jump"
+              style={{ animationDelay: '1s' }}
+            >
+              <TechIcon className="w-10 h-10 text-gray-700" />
+            </div>
+          </div>
+        </div>
+        <div className={`w-full md:w-2/3 space-y-6 text-lg text-gray-700 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-5'}`}>
+          <p>
+            Hello! I'm Shah Jahan Baloch, a passionate advocate for public health and community development. Hailing from the resilient region of Awaran, Balochistan, Pakistan, I've witnessed firsthand how access to health and education can transform lives. This has fueled my dedication to creating sustainable, positive change in communities, both online and offline.
+          </p>
+          <p>
+            I am currently pursuing my Bachelor's in Public Health, where I am learning to bridge the gap between healthcare systems and the people they serve. My goal is to build healthier, more informed, and empowered communities through digital education and grassroots initiatives.
+          </p>
+          <blockquote className="border-l-4 border-brand-orange-400 pl-6 py-2 italic text-gray-800 bg-orange-50 rounded-r-md">
+            "Education frees the individual, and health improves life."
+          </blockquote>
+        </div>
+      </div>
+    </Section>
+  );
+};
+
+export default About;
