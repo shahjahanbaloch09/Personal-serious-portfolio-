@@ -12,9 +12,9 @@ const About: React.FC = () => {
         <div className={`w-full md:w-1/3 flex justify-center items-center transition-all duration-700 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
           <div className="relative w-64 h-64 lg:w-80 lg:h-80">
              <img
-              src="https://picsum.photos/seed/shahjahan/400/400"
+              src="/assets/images/profile.webp"
               alt="Shah Jahan Baloch"
-              className="rounded-full shadow-2xl border-8 border-white object-cover w-full h-full"
+              className="rounded-full shadow-2xl border-8 border-white object-cover w-full h-full hover:scale-105 transition-all duration-300"
             />
             <div 
               className="absolute -top-4 -left-4 w-20 h-20 bg-white/80 backdrop-blur-md rounded-full flex items-center justify-center shadow-lg animate-jump"

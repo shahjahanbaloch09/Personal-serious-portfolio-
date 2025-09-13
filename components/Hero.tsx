@@ -20,20 +20,6 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://picsum.photos/1920/1080?grayscale&blur=2')" }}></div>
 
       <div className="relative z-10 p-4">
-        {/* Profile Picture */}
-        <div className="mb-8 animate-fadeInUp" style={{ animationDelay: '0.1s' }}>
-          <div className="relative mx-auto w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56">
-            <img 
-              src="/assets/images/profile.webp" 
-              alt="Shah Jahan Baloch - Profile Picture"
-              className="w-full h-full object-cover rounded-full border-4 border-white/20 shadow-2xl backdrop-blur-sm
-                         hover:scale-105 transition-all duration-300 ease-in-out
-                         ring-4 ring-brand-orange-400/30 hover:ring-brand-orange-400/50"
-            />
-            <div className="absolute inset-0 rounded-full bg-gradient-to-t from-black/10 to-transparent"></div>
-          </div>
-        </div>
-
         <h1 className="text-5xl md:text-7xl font-bold font-sans tracking-tight mb-4 drop-shadow-lg animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
           SHAH JAHAN BALOCH
         </h1>
