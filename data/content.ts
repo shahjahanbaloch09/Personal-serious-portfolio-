@@ -111,6 +111,10 @@ export const workshops: Workshop[] = [
     {
         id: 1,
         title: 'Health Awareness Camp 2023',
+        date: 'June 15-17, 2023',
+        location: 'Bandat Village, Balochistan',
+        description: 'Organized a comprehensive 3-day health awareness camp focusing on preventive healthcare, nutrition education, and basic medical checkups. We reached over 200 community members, providing free health screenings and distributing educational materials in the local language.',
+        impact: '200+ people served, 150 health screenings conducted',
         images: [
             'https://picsum.photos/seed/workshop1a/400/300',
             'https://picsum.photos/seed/workshop1b/400/300',
@@ -121,11 +125,29 @@ export const workshops: Workshop[] = [
     {
         id: 2,
         title: 'Digital Literacy Workshop for Youth 2024',
+        date: 'March 20-22, 2024',
+        location: 'Awaran Education Center, Balochistan',
+        description: 'Conducted an intensive digital literacy program for young people aged 16-25, covering basic computer skills, internet safety, online learning platforms, and digital career opportunities. The workshop included hands-on training and mentorship sessions.',
+        impact: '45 youth trained, 30+ received follow-up mentoring',
         images: [
             'https://picsum.photos/seed/workshop2a/400/300',
             'https://picsum.photos/seed/workshop2b/400/300',
             'https://picsum.photos/seed/workshop2c/400/300',
             'https://picsum.photos/seed/workshop2d/400/300',
+        ]
+    },
+    {
+        id: 3,
+        title: 'Community First Aid Training Program',
+        date: 'September 10, 2024',
+        location: 'Multiple Villages, Awaran District',
+        description: 'Delivered comprehensive first aid training to community volunteers and local health workers. Covered emergency response, CPR, wound care, and emergency preparedness. Participants received certification and first aid kits.',
+        impact: '60 volunteers certified, 12 villages covered',
+        images: [
+            'https://picsum.photos/seed/workshop3a/400/300',
+            'https://picsum.photos/seed/workshop3b/400/300',
+            'https://picsum.photos/seed/workshop3c/400/300',
+            'https://picsum.photos/seed/workshop3d/400/300',
         ]
     }
 ];
