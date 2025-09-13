@@ -20,7 +20,7 @@ export const educationHistory: EducationItem[] = [
   {
     institution: 'Islamia University of Bahawalpur',
     degree: 'Public Health (Bachelor’s)',
-    duration: '2021 - Present',
+    duration: '2025 - Present',
     description: 'Focusing on epidemiology, health policy, and community health sciences to understand and improve population health outcomes.',
   },
   {
