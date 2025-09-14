@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 import Header from './components/Header.tsx';
 import Hero from './components/Hero.tsx';
@@ -16,6 +17,7 @@ import Modal from './components/Modal.tsx';
 import { workshops } from './data/content.ts';
 import { BlogPost as BlogPostType } from './types.ts';
 import BlogPostDetail from './components/BlogPostDetail.tsx';
+import BackToTopButton from './components/BackToTopButton.tsx';
 
 const App: React.FC = () => {
   const [modalImage, setModalImage] = useState<string | null>(null);
@@ -45,7 +47,7 @@ const App: React.FC = () => {
         {selectedPost ? (
           <BlogPostDetail post={selectedPost} onClose={handleClosePost} />
         ) : (
-          <>
+          <div className="animate-fadeInUp" style={{ animationDuration: '0.5s' }}>
             <Hero />
             <About />
             <Education />
@@ -56,11 +58,12 @@ const App: React.FC = () => {
             <Workshops workshops={workshops} openModal={openModal} />
             <Blog onPostSelect={handleSelectPost}/>
             <Contact />
-          </>
+          </div>
         )}
       </main>
       <Footer />
       {modalImage && <Modal imageUrl={modalImage} onClose={closeModal} />}
+      <BackToTopButton />
     </div>
   );
 };

@@ -20,7 +20,7 @@ const BlogPostCard: React.FC<{ post: BlogPostType, delay: number, onPostSelect: 
                 <p className="text-sm text-gray-500 mb-2">{post.date}</p>
                 <h3 className="text-xl font-bold font-sans text-brand-blue-800 mb-3 flex-grow">{post.title}</h3>
                 <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                <button onClick={() => onPostSelect(post)} className="font-sans font-semibold text-brand-orange-600 hover:text-brand-orange-700 self-start text-left">
+                <button onClick={() => onPostSelect(post)} className="font-sans font-semibold text-brand-orange-600 hover:text-brand-orange-700 self-start text-left transition-transform active:translate-y-px">
                     Read More &rarr;
                 </button>
             </div>

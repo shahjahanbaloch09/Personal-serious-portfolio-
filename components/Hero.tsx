@@ -16,8 +16,8 @@ const Hero: React.FC = () => {
 
   return (
     <section id="home" className="relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-tr from-brand-blue-700 to-brand-orange-500 opacity-90 animate-moveGradient" style={{ backgroundSize: '200% 200%' }}></div>
-      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://picsum.photos/1920/1080?grayscale&blur=2')" }}></div>
+      <div className="absolute inset-0 bg-gradient-to-tr from-brand-blue-700 to-brand-orange-500 opacity-80 animate-moveGradient" style={{ backgroundSize: '200% 200%' }}></div>
+      <div className="absolute inset-0 bg-cover bg-center animate-kenburns" style={{ backgroundImage: "url('https://picsum.photos/seed/hero/1920/1080')" }}></div>
 
       <div className="relative z-10 p-4">
         <h1 className="text-5xl md:text-7xl font-bold font-sans tracking-tight mb-4 drop-shadow-lg animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
           )}
         </div>
       </div>
-       <a href="#about" aria-label="Scroll down" className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
+       <a href="#about" aria-label="Scroll down" className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 transition-transform active:scale-90">
         <svg className="w-8 h-8 text-white/70 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
       </a>
     </section>

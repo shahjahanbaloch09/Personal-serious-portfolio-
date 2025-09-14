@@ -1,23 +1,12 @@
 import path from 'path';
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 
-export default defineConfig(() => {
+export default defineConfig(({ mode }) => {
+    const env = loadEnv(mode, '.', '');
     return {
-      server: {
-        host: '0.0.0.0',
-        port: 5000,
-        strictPort: true,
-        allowedHosts: true,
-        hmr: {
-          clientPort: 5000
-        },
-        proxy: {
-          '/api': {
-            target: 'http://localhost:3001',
-            changeOrigin: true,
-            secure: false
-          }
-        }
+      define: {
+        'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
       },
       resolve: {
         alias: {

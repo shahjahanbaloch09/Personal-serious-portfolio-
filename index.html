@@ -85,12 +85,17 @@
                 '0%, 100%': { transform: 'translateY(0)' },
                 '50%': { transform: 'translateY(-8px)' },
               },
+              kenburns: {
+                '0%': { transform: 'scale(1.0) translate(0, 0)' },
+                '100%': { transform: 'scale(1.1) translate(-1%, 1%)' },
+              },
             },
             animation: {
               fadeInUp: 'fadeInUp 0.8s ease-out forwards',
               typing: 'typing 3.5s steps(40, end), blink .75s step-end infinite',
               moveGradient: 'moveGradient 15s ease infinite',
               jump: 'jump 2.5s ease-in-out infinite',
+              kenburns: 'kenburns 30s ease-in-out infinite alternate',
             }
           },
         },
@@ -101,7 +106,8 @@
   "imports": {
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
     "react/": "https://aistudiocdn.com/react@^19.1.1/",
-    "react": "https://aistudiocdn.com/react@^19.1.1"
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.19.0"
   }
 }
 </script>

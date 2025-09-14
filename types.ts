@@ -29,10 +29,6 @@ export interface Certificate {
 export interface Workshop {
   id: number;
   title: string;
-  date: string;
-  location: string;
-  description: string;
-  impact: string;
   images: string[];
 }
 
