@@ -11,6 +11,13 @@ export interface EducationItem {
   description: string;
 }
 
+export interface Experience {
+  company: string;
+  role: string;
+  duration: string;
+  description: string;
+}
+
 export interface Project {
   title: string;
   acronym: string;
@@ -29,6 +36,9 @@ export interface Certificate {
 export interface Workshop {
   id: number;
   title: string;
+  description: string;
+  date: string;
+  location: string;
   images: string[];
 }
 
@@ -57,4 +67,6 @@ export interface Testimonial {
   quote: string;
   name: string;
   title: string;
+  imageUrl: string;
+  linkedinUrl: string;
 }

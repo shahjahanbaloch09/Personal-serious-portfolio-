@@ -1,10 +1,10 @@
 
-
 import React, { useState } from 'react';
 import Header from './components/Header.tsx';
 import Hero from './components/Hero.tsx';
 import About from './components/About.tsx';
 import Education from './components/Education.tsx';
+import Experience from './components/Experience.tsx';
 import Skills from './components/Skills.tsx';
 import Projects from './components/Projects.tsx';
 import Certificates from './components/Certificates.tsx';
@@ -17,10 +17,14 @@ import Modal from './components/Modal.tsx';
 import { workshops } from './data/content.ts';
 import { BlogPost as BlogPostType } from './types.ts';
 import BlogPostDetail from './components/BlogPostDetail.tsx';
+import AboutDetail from './components/AboutDetail.tsx';
 import BackToTopButton from './components/BackToTopButton.tsx';
+
+type View = 'main' | 'blog' | 'about';
 
 const App: React.FC = () => {
   const [modalImage, setModalImage] = useState<string | null>(null);
+  const [currentView, setCurrentView] = useState<View>('main');
   const [selectedPost, setSelectedPost] = useState<BlogPostType | null>(null);
 
   const openModal = (imageUrl: string) => {
@@ -33,24 +37,34 @@ const App: React.FC = () => {
   
   const handleSelectPost = (post: BlogPostType) => {
     setSelectedPost(post);
+    setCurrentView('blog');
     window.scrollTo(0, 0);
   };
   
-  const handleClosePost = () => {
+  const handleShowAboutDetail = () => {
+    setCurrentView('about');
+    window.scrollTo(0, 0);
+  };
+  
+  const handleCloseDetail = () => {
+    setCurrentView('main');
     setSelectedPost(null);
   };
 
-  return (
-    <div className="bg-gray-50 font-serif text-gray-800 antialiased">
-      <Header />
-      <main>
-        {selectedPost ? (
-          <BlogPostDetail post={selectedPost} onClose={handleClosePost} />
-        ) : (
+  const renderContent = () => {
+    switch (currentView) {
+      case 'blog':
+        return selectedPost && <BlogPostDetail post={selectedPost} onClose={handleCloseDetail} />;
+      case 'about':
+        return <AboutDetail onClose={handleCloseDetail} />;
+      case 'main':
+      default:
+        return (
           <div className="animate-fadeInUp" style={{ animationDuration: '0.5s' }}>
             <Hero />
-            <About />
+            <About onReadMore={handleShowAboutDetail} />
             <Education />
+            <Experience />
             <Skills />
             <Projects />
             <Certificates />
@@ -59,7 +73,15 @@ const App: React.FC = () => {
             <Blog onPostSelect={handleSelectPost}/>
             <Contact />
           </div>
-        )}
+        );
+    }
+  };
+
+  return (
+    <div className="bg-gray-50 font-serif text-gray-800 antialiased">
+      <Header />
+      <main>
+        {renderContent()}
       </main>
       <Footer />
       {modalImage && <Modal imageUrl={modalImage} onClose={closeModal} />}

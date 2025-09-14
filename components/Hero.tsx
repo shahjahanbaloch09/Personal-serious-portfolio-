@@ -20,6 +20,12 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-cover bg-center animate-kenburns" style={{ backgroundImage: "url('https://picsum.photos/seed/hero/1920/1080')" }}></div>
 
       <div className="relative z-10 p-4">
+        <img
+          src="/profile.jpg"
+          alt="Shah Jahan Baloch"
+          className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 rounded-full object-cover border-4 border-white/30 shadow-2xl animate-fadeInUp"
+          style={{ animationDelay: '0s' }}
+        />
         <h1 className="text-5xl md:text-7xl font-bold font-sans tracking-tight mb-4 drop-shadow-lg animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
           SHAH JAHAN BALOCH
         </h1>

@@ -1,20 +1,34 @@
+
 import React, { useState } from 'react';
 import Section from './Section.tsx';
 import { testimonials } from '../data/content.ts';
 import { Testimonial } from '../types.ts';
 import { QuoteIcon } from './icons/DecorativeIcons.tsx';
+import { LinkedInIcon } from './icons/SocialIcons.tsx';
 
 const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }) => {
     return (
         <div className="bg-white rounded-lg shadow-lg p-8 h-full flex flex-col relative overflow-hidden min-w-full">
-            <QuoteIcon className="absolute top-4 right-4 w-20 h-20 text-brand-blue-100/50 transform rotate-12" />
-            <blockquote className="relative z-10 text-gray-600 italic leading-relaxed flex-grow mb-6">
+            <QuoteIcon className="absolute -top-2 -left-2 w-20 h-20 text-brand-orange-50" />
+            <div className="relative z-10 flex items-center mb-6">
+                <img src={testimonial.imageUrl} alt={testimonial.name} className="w-20 h-20 rounded-full object-cover shadow-md border-4 border-white" />
+                <div className="ml-5">
+                    <p className="font-bold font-sans text-brand-blue-800 text-lg">{testimonial.name}</p>
+                    <p className="text-sm text-gray-500">{testimonial.title}</p>
+                </div>
+                 <a 
+                    href={testimonial.linkedinUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    aria-label={`LinkedIn profile of ${testimonial.name}`}
+                    className="ml-auto text-gray-400 hover:text-brand-blue-600 transition-colors"
+                >
+                    <LinkedInIcon className="w-7 h-7" />
+                </a>
+            </div>
+            <blockquote className="relative z-10 text-gray-600 italic leading-relaxed flex-grow">
                 "{testimonial.quote}"
             </blockquote>
-            <footer className="relative z-10 mt-auto">
-                <p className="font-bold font-sans text-brand-blue-800">{testimonial.name}</p>
-                <p className="text-sm text-gray-500">{testimonial.title}</p>
-            </footer>
         </div>
     )
 }
@@ -55,12 +69,12 @@ const Testimonials: React.FC = () => {
         </div>
         
         {/* Navigation Arrows */}
-        <button onClick={prevSlide} aria-label="Previous testimonial" className="absolute top-1/2 -left-4 md:-left-12 -translate-y-1/2 z-10 p-2 rounded-full bg-white/50 hover:bg-white shadow-md transition-all opacity-0 group-hover:opacity-100">
+        <button onClick={prevSlide} aria-label="Previous testimonial" className="absolute top-1/2 -left-4 md:-left-12 -translate-y-1/2 z-10 p-2 rounded-full bg-white/50 hover:bg-white shadow-md transition-all opacity-0 group-hover:opacity-100 active:scale-90">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-brand-blue-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
         </button>
-        <button onClick={nextSlide} aria-label="Next testimonial" className="absolute top-1/2 -right-4 md:-right-12 -translate-y-1/2 z-10 p-2 rounded-full bg-white/50 hover:bg-white shadow-md transition-all opacity-0 group-hover:opacity-100">
+        <button onClick={nextSlide} aria-label="Next testimonial" className="absolute top-1/2 -right-4 md:-right-12 -translate-y-1/2 z-10 p-2 rounded-full bg-white/50 hover:bg-white shadow-md transition-all opacity-0 group-hover:opacity-100 active:scale-90">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-brand-blue-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>

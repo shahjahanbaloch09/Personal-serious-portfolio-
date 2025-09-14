@@ -1,5 +1,5 @@
 
-import { NavLink, EducationItem, Project, Certificate, Workshop, BlogPost, SocialLink, Skill, Testimonial } from '../types.ts';
+import { NavLink, EducationItem, Project, Certificate, Workshop, BlogPost, SocialLink, Skill, Testimonial, Experience } from '../types.ts';
 import { LinkedInIcon, TwitterIcon, InstagramIcon, FacebookIcon } from '../components/icons/SocialIcons.tsx';
 import { PublicHealthIcon, CommunityOutreachIcon, DigitalMarketingIcon, ProjectManagementIcon, ContentCreationIcon, PublicSpeakingIcon } from '../components/icons/SkillIcons.tsx';
 
@@ -8,6 +8,7 @@ export const navLinks: NavLink[] = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
   { name: 'Education', href: '#education' },
+  { name: 'Experience', href: '#experience' },
   { name: 'Skills', href: '#skills' },
   { name: 'Projects', href: '#projects' },
   { name: 'Certificates', href: '#certificates' },
@@ -16,6 +17,23 @@ export const navLinks: NavLink[] = [
   { name: 'Blog', href: '#blog' },
   { name: 'Contact', href: '#contact' },
 ];
+
+export const longAboutMe = {
+    title: "My Journey in Public Health and Community Building",
+    imageUrl: "https://picsum.photos/seed/community-work/1200/600",
+    content: `
+        <p>Hello! I'm Shah Jahan Baloch, a passionate advocate for public health and community development. Hailing from the resilient region of Awaran, Balochistan, Pakistan, I've witnessed firsthand how access to health and education can transform lives. This has fueled my dedication to creating sustainable, positive change in communities, both online and offline.</p>
+        <p>My journey began not in a classroom, but in observing the daily struggles and triumphs of my community. I saw a gap between potential and opportunity, and I felt a deep-seated responsibility to help bridge it. This led me to pursue a Bachelor's in Public Health at the Islamia University of Bahawalpur, where I am learning to build the theoretical frameworks needed to turn passion into impactful, evidence-based action.</p>
+        <h2>My Mission and Vision</h2>
+        <p>My core belief is simple: "Education frees the individual, and health improves life." This principle guides all my endeavors. I am on a mission to dismantle the barriers that prevent individuals from accessing quality healthcare and education. My goal is to build healthier, more informed, and empowered communities through a combination of digital education, grassroots initiatives, and strategic advocacy.</p>
+        <p>I am particularly focused on leveraging technology to reach underserved populations. In a world that is increasingly digital, I believe we have an unprecedented opportunity to disseminate knowledge and connect people with vital resources. Whether it's through a digital literacy program for youth or a social media campaign for health awareness, I am always exploring innovative ways to make a difference.</p>
+        <h2>Leadership and Initiatives</h2>
+        <p>My academic pursuits are complemented by hands-on experience in community organizing. I am the founder of several initiatives, including 'Vision for Tomorrow,' which focuses on digital literacy for youth, and the 'Build Bandat Foundation,' a non-profit dedicated to long-term development in my home village. These projects have taught me the importance of collaboration, persistence, and the power of a shared vision.</p>
+        <p>As an alumnus of the Aspire Institute's Leadership Development Program, I've had the privilege of connecting with a global network of young leaders who share my commitment to creating positive change. This experience has broadened my perspective and reinforced my belief in the power of collective action.</p>
+        <p>Thank you for taking the time to learn more about my journey. I am always open to collaboration and new ideas. If my mission resonates with you, please feel free to connect with me.</p>
+    `
+};
+
 
 // FIX: Exported socialLinks constant. It was being imported in Contact.tsx but was not defined.
 export const socialLinks: SocialLink[] = [
@@ -54,6 +72,33 @@ export const educationHistory: EducationItem[] = [
     duration: '2-Month Online Course',
     description: 'Completed an intensive program focused on personal growth, leadership skills, and fostering a global network of young leaders.',
   },
+  {
+    institution: 'Govt. Boys Degree College Awaran',
+    degree: 'Intermediate in Pre-Medical',
+    duration: '2018 - 2020',
+    description: 'Built a strong foundation in biological sciences, chemistry, and physics, which sparked my interest in human health and medicine.',
+  }
+];
+
+export const experience: Experience[] = [
+    {
+        company: 'Build Bandat Foundation',
+        role: 'Founder & Director',
+        duration: 'Jan 2022 - Present',
+        description: 'Leading a non-profit focused on sustainable development projects in education, healthcare, and economic empowerment for the Bandat community.'
+    },
+    {
+        company: 'Vision for Tomorrow',
+        role: 'Project Lead',
+        duration: 'Jun 2021 - Present',
+        description: 'Managing an initiative to provide digital literacy and career counseling to youth in underserved regions of Balochistan.'
+    },
+    {
+        company: 'Community Health Camps',
+        role: 'Volunteer Coordinator',
+        duration: 'Mar 2020 - Present',
+        description: 'Organizing and managing volunteers for various health awareness and medical check-up camps in remote areas.'
+    }
 ];
 
 export const skills: Skill[] = [
@@ -108,10 +153,10 @@ export const projects: Project[] = [
 ];
 
 export const coursesAndCertifications: Certificate[] = [
-  { id: 1, title: 'Community Health Worker Certification', institute: 'Coursera', date: 'May 2023', description: 'A comprehensive course covering the fundamentals of community health, outreach, and patient advocacy.', imageUrl: 'https://picsum.photos/seed/cert1/400/300' },
-  { id: 2, title: 'Digital Education Leadership', institute: 'EdX', date: 'March 2023', description: 'Learned strategies for leveraging digital tools to create engaging and effective online learning experiences.', imageUrl: 'https://picsum.photos/seed/cert2/400/300' },
-  { id: 3, title: 'Project Management Essentials', institute: 'PMI', date: 'January 2023', description: 'Acquired foundational project management skills, including planning, execution, and monitoring of project lifecycles.', imageUrl: 'https://picsum.photos/seed/cert3/400/300' },
-  { id: 4, title: 'First Aid & CPR Training', institute: 'Red Cross', date: 'December 2022', description: 'Certified in providing immediate care for injuries and medical emergencies, including CPR and AED usage.', imageUrl: 'https://picsum.photos/seed/cert5/400/300' },
+  { id: 1, title: 'Community Health Worker Certification', institute: 'Coursera', date: 'May 2023', description: 'A comprehensive course covering the fundamentals of community health, outreach, and patient advocacy.', imageUrl: 'https://picsum.photos/seed/cert1/800/600' },
+  { id: 2, title: 'Digital Education Leadership', institute: 'EdX', date: 'March 2023', description: 'Learned strategies for leveraging digital tools to create engaging and effective online learning experiences.', imageUrl: 'https://picsum.photos/seed/cert2/800/600' },
+  { id: 3, title: 'Project Management Essentials', institute: 'PMI', date: 'January 2023', description: 'Acquired foundational project management skills, including planning, execution, and monitoring of project lifecycles.', imageUrl: 'https://picsum.photos/seed/cert3/800/600' },
+  { id: 4, title: 'First Aid & CPR Training', institute: 'Red Cross', date: 'December 2022', description: 'Certified in providing immediate care for injuries and medical emergencies, including CPR and AED usage.', imageUrl: 'https://picsum.photos/seed/cert5/800/600' },
 ];
 
 export const testimonials: Testimonial[] = [
@@ -119,16 +164,22 @@ export const testimonials: Testimonial[] = [
     quote: "Shah Jahan's dedication to community health is truly inspiring. His ability to connect with people and motivate them towards positive change is remarkable. He was a key player in our recent health awareness campaign.",
     name: 'Dr. Ayesha Khan',
     title: 'Senior Public Health Official',
+    imageUrl: 'https://picsum.photos/seed/person1/100/100',
+    linkedinUrl: '#',
   },
   {
     quote: "Working with Shah Jahan on the 'Vision for Tomorrow' project has been a privilege. His passion for digital education and his innovative approach have empowered countless students in our community.",
     name: 'Fatima Ahmed',
     title: 'Co-founder, Vision for Tomorrow',
+    imageUrl: 'https://picsum.photos/seed/person2/100/100',
+    linkedinUrl: '#',
   },
   {
     quote: "As a community leader, I've seen Shah Jahan's tireless efforts firsthand. He doesn't just manage projects; he builds relationships and fosters a true sense of collective responsibility. He is a great asset to any team.",
     name: 'Ali Raza',
     title: 'Community Elder, Bandat Village',
+    imageUrl: 'https://picsum.photos/seed/person3/100/100',
+    linkedinUrl: '#',
   },
 ];
 
@@ -136,21 +187,40 @@ export const workshops: Workshop[] = [
     {
         id: 1,
         title: 'Health Awareness Camp 2023',
+        description: 'A successful health camp providing free check-ups and health education to over 200 community members.',
+        date: 'November 15, 2023',
+        location: 'Awaran, Balochistan',
         images: [
             'https://picsum.photos/seed/workshop1a/400/300',
             'https://picsum.photos/seed/workshop1b/400/300',
             'https://picsum.photos/seed/workshop1c/400/300',
             'https://picsum.photos/seed/workshop1d/400/300',
+            'https://picsum.photos/seed/workshop1e/400/300',
         ]
     },
     {
         id: 2,
-        title: 'Digital Literacy Workshop for Youth 2024',
+        title: 'Digital Literacy for Youth',
+        description: 'A 3-day workshop empowering local youth with essential digital skills, including internet safety and online research.',
+        date: 'July 22, 2023',
+        location: 'Bandat Village',
         images: [
             'https://picsum.photos/seed/workshop2a/400/300',
             'https://picsum.photos/seed/workshop2b/400/300',
             'https://picsum.photos/seed/workshop2c/400/300',
-            'https://picsum.photos/seed/workshop2d/400/300',
+        ]
+    },
+    {
+        id: 3,
+        title: 'First Aid Training Session',
+        description: 'Partnered with local medics to provide basic first aid and CPR training to school teachers and community leaders.',
+        date: 'April 05, 2024',
+        location: 'Bahawalpur',
+        images: [
+            'https://picsum.photos/seed/workshop3a/400/300',
+            'https://picsum.photos/seed/workshop3b/400/300',
+            'https://picsum.photos/seed/workshop3c/400/300',
+            'https://picsum.photos/seed/workshop3d/400/300',
         ]
     }
 ];
