@@ -17,7 +17,7 @@ const About: React.FC<AboutProps> = ({ onReadMore }) => {
         <div className={`w-full md:w-1/3 flex justify-center items-center transition-all duration-700 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
           <div className="relative w-64 h-64 lg:w-80 lg:h-80">
              <img
-              src="/profile.jpg"
+              src="/shah-profile.jpg"
               alt="Shah Jahan Baloch"
               className="rounded-full shadow-2xl border-8 border-white object-cover w-full h-full"
             />
@@ -41,23 +41,33 @@ const About: React.FC<AboutProps> = ({ onReadMore }) => {
             </div>
           </div>
         </div>
-        <div className={`w-full md:w-2/3 space-y-6 text-lg text-gray-700 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-5'}`}>
-          <p>
-            Hello! I'm Shah Jahan Baloch, a passionate advocate for public health and community development from Awaran, Balochistan. My journey is driven by a firsthand understanding of how access to health and education can transform lives, fueling my dedication to creating sustainable, positive change.
+        <div className={`w-full md:w-2/3 space-y-4 md:space-y-6 text-base md:text-lg text-gray-700 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-5'}`}>
+          <p className="leading-relaxed">
+            Hello! I'm Shah Jahan Baloch, a passionate advocate for public health and community development from Awaran, Balochistan, Pakistan.
           </p>
-          <p>
-            Currently pursuing a Bachelor's in Public Health, I am committed to bridging the gap between healthcare systems and the communities they serve. My goal is to build healthier, more informed, and empowered societies through digital education and grassroots initiatives.
+          <p className="leading-relaxed">
+            My journey is driven by a firsthand understanding of how access to health and education can transform lives, fueling my dedication to creating sustainable, positive change in communities.
           </p>
-          <blockquote className="border-l-4 border-brand-orange-400 pl-6 py-2 italic text-gray-800 bg-orange-50 rounded-r-md">
+          <p className="leading-relaxed">
+            Currently pursuing a Bachelor's in Public Health at Islamia University of Bahawalpur, I am committed to bridging the gap between healthcare systems and the communities they serve.
+          </p>
+          <p className="leading-relaxed">
+            As the founder of 'Build Bandat Foundation' and 'Vision for Tomorrow', I focus on digital literacy, health advocacy, and sustainable development initiatives.
+          </p>
+          <p className="leading-relaxed">
+            My goal is to build healthier, more informed, and empowered societies through digital education, grassroots initiatives, and evidence-based health interventions.
+          </p>
+          
+          <blockquote className="border-l-4 border-brand-orange-400 pl-6 py-3 italic text-gray-800 bg-orange-50 rounded-r-md mt-6">
             "Education frees the individual, and health improves life."
           </blockquote>
           
           <div className="pt-4">
              <button
                 onClick={onReadMore}
-                className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand-orange-600 hover:bg-brand-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-orange-500 transition-all duration-300 transform hover:scale-105 active:scale-95"
+                className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand-orange-600 hover:bg-brand-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-orange-500 transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg"
               >
-                Read My Full Story &rarr;
+                Read My Complete Journey &rarr;
             </button>
           </div>
 

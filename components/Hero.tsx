@@ -17,23 +17,22 @@ const Hero: React.FC = () => {
   return (
     <section id="home" className="relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-tr from-brand-blue-700 to-brand-orange-500 opacity-80 animate-moveGradient" style={{ backgroundSize: '200% 200%' }}></div>
-      <div className="absolute inset-0 bg-cover bg-center animate-kenburns" style={{ backgroundImage: "url('https://picsum.photos/seed/hero/1920/1080')" }}></div>
+      <div className="absolute inset-0 bg-cover bg-center animate-kenburns" style={{ backgroundImage: "url('https://picsum.photos/seed/public-health/1920/1080')" }}></div>
 
-      <div className="relative z-10 p-4">
-        <img
-          src="/profile.jpg"
-          alt="Shah Jahan Baloch"
-          className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 rounded-full object-cover border-4 border-white/30 shadow-2xl animate-fadeInUp"
-          style={{ animationDelay: '0s' }}
-        />
-        <h1 className="text-5xl md:text-7xl font-bold font-sans tracking-tight mb-4 drop-shadow-lg animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
+      <div className="relative z-10 p-4 max-w-4xl mx-auto">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-sans tracking-tight mb-6 drop-shadow-lg animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
           SHAH JAHAN BALOCH
         </h1>
-        <div className="text-xl md:text-2xl font-light font-sans drop-shadow-md animate-fadeInUp min-h-[2rem]" style={{ animationDelay: '0.4s' }}>
+        <div className="text-lg md:text-xl lg:text-2xl font-light font-sans drop-shadow-md animate-fadeInUp min-h-[2rem] mb-8" style={{ animationDelay: '0.4s' }}>
           <span className="inline-block align-bottom">{typedTagline}</span>
           {typedTagline.length < fullTagline.length && (
             <span className="inline-block w-1 h-7 bg-brand-orange-400 -mb-1 animate-pulse"></span>
           )}
+        </div>
+        <div className="text-sm md:text-base lg:text-lg font-light drop-shadow-md animate-fadeInUp" style={{ animationDelay: '0.6s' }}>
+          <p className="max-w-2xl mx-auto leading-relaxed">
+            Empowering communities through digital education, health advocacy, and sustainable development in Balochistan, Pakistan.
+          </p>
         </div>
       </div>
        <a href="#about" aria-label="Scroll down" className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 transition-transform active:scale-90">

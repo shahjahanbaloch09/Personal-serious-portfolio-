@@ -11,15 +11,15 @@ const SkillCard: React.FC<{ skill: Skill, delay: number }> = ({ skill, delay }) 
     return (
         <div 
             ref={ref} 
-            className={`transition-all duration-500 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'} bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1`}
+            className={`transition-all duration-500 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'} bg-white rounded-lg shadow-md hover:shadow-lg border border-gray-100 p-4 md:p-5 hover:-translate-y-1 group`}
             style={{transitionDelay: `${delay}ms`}}
         >
-            <div className="flex items-start">
-                <skill.icon className="w-10 h-10 mr-5 text-brand-orange-500 flex-shrink-0 mt-1" />
-                <div>
-                    <h3 className="text-xl font-bold font-sans text-brand-blue-800 mb-2">{skill.name}</h3>
-                    <p className="text-gray-600 leading-relaxed">{skill.description}</p>
+            <div className="flex flex-col space-y-3">
+                <div className="flex items-center space-x-3">
+                    <skill.icon className="w-8 h-8 md:w-10 md:h-10 text-brand-orange-500 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
+                    <h3 className="text-base md:text-lg font-bold font-sans text-brand-blue-800 leading-tight">{skill.name}</h3>
                 </div>
+                <p className="text-xs md:text-sm text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors">{skill.description}</p>
             </div>
         </div>
     );
@@ -27,11 +27,13 @@ const SkillCard: React.FC<{ skill: Skill, delay: number }> = ({ skill, delay }) 
 
 const Skills: React.FC = () => {
   return (
-    <Section id="skills" title="My Skills" subtitle="A collection of my professional abilities and the tools I use to make an impact.">
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {skills.map((skill, index) => (
-          <SkillCard key={skill.name} skill={skill} delay={index * 100} />
-        ))}
+    <Section id="skills" title="My Skills" subtitle="Core competencies that drive my impact in public health and community development.">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          {skills.map((skill, index) => (
+            <SkillCard key={skill.name} skill={skill} delay={index * 80} />
+          ))}
+        </div>
       </div>
     </Section>
   );
