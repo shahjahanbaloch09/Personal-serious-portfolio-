@@ -1,4 +1,3 @@
-
 import { NavLink, EducationItem, Project, Certificate, Workshop, BlogPost, SocialLink, Skill, Testimonial, Experience } from '../types.ts';
 import { LinkedInIcon, TwitterIcon, InstagramIcon, FacebookIcon } from '../components/icons/SocialIcons.tsx';
 import { PublicHealthIcon, CommunityOutreachIcon, DigitalMarketingIcon, ProjectManagementIcon, ContentCreationIcon, PublicSpeakingIcon } from '../components/icons/SkillIcons.tsx';
@@ -28,7 +27,7 @@ export const longAboutMe = {
         <p>My core belief is simple: "Education frees the individual, and health improves life." This principle guides all my endeavors. I am on a mission to dismantle the barriers that prevent individuals from accessing quality healthcare and education. My goal is to build healthier, more informed, and empowered communities through a combination of digital education, grassroots initiatives, and strategic advocacy.</p>
         <p>I am particularly focused on leveraging technology to reach underserved populations. In a world that is increasingly digital, I believe we have an unprecedented opportunity to disseminate knowledge and connect people with vital resources. Whether it's through a digital literacy program for youth or a social media campaign for health awareness, I am always exploring innovative ways to make a difference.</p>
         <h2>Leadership and Initiatives</h2>
-        <p>My academic pursuits are complemented by hands-on experience in community organizing. I am the founder of several initiatives, including 'Vision for Tomorrow,' which focuses on digital literacy for youth, and the 'Build Bandat Foundation,' a non-profit dedicated to long-term development in my home village. These projects have taught me the importance of collaboration, persistence, and the power of a shared vision.</p>
+        <p>My academic pursuits are complemented by hands-on experience in community organizing. I am the founder of several initiatives, including the 'Build Bandat Foundation,' a non-profit dedicated to long-term development in my home village. These projects have taught me the importance of collaboration, persistence, and the power of a shared vision.</p>
         <p>As an alumnus of the Aspire Institute's Leadership Development Program, I've had the privilege of connecting with a global network of young leaders who share my commitment to creating positive change. This experience has broadened my perspective and reinforced my belief in the power of collective action.</p>
         <p>Thank you for taking the time to learn more about my journey. I am always open to collaboration and new ideas. If my mission resonates with you, please feel free to connect with me.</p>
     `
@@ -61,43 +60,43 @@ export const socialLinks: SocialLink[] = [
 
 export const educationHistory: EducationItem[] = [
   {
+    institution: 'Govt. Boys Degree College Awaran',
+    degree: 'Intermediate in Pre-Medical',
+    duration: '2024',
+    description: 'Completed with exceptional performance, scoring 940/1100. Built a strong foundation in biological sciences, chemistry, and physics, which sparked my interest in human health and medicine.',
+  },
+  {
     institution: 'Islamia University of Bahawalpur',
-    degree: 'Public Health (Bachelor’s)',
-    duration: '2021 - Present',
-    description: 'Focusing on epidemiology, health policy, and community health sciences to understand and improve population health outcomes.',
+    degree: 'Public Health (Bachelor\'s)',
+    duration: '2025 - Present',
+    description: 'Currently pursuing a Bachelor\'s degree focusing on epidemiology, health policy, and community health sciences to understand and improve population health outcomes.',
   },
   {
     institution: 'Aspire Institute',
     degree: 'Leadership Development Program (Alumni)',
     duration: '2-Month Online Course',
     description: 'Completed an intensive program focused on personal growth, leadership skills, and fostering a global network of young leaders.',
-  },
-  {
-    institution: 'Govt. Boys Degree College Awaran',
-    degree: 'Intermediate in Pre-Medical',
-    duration: '2018 - 2020',
-    description: 'Built a strong foundation in biological sciences, chemistry, and physics, which sparked my interest in human health and medicine.',
   }
 ];
 
 export const experience: Experience[] = [
     {
-        company: 'Build Bandat Foundation',
-        role: 'Founder & Director',
-        duration: 'Jan 2022 - Present',
-        description: 'Leading a non-profit focused on sustainable development projects in education, healthcare, and economic empowerment for the Bandat community.'
+        company: 'World Health Organization (WHO)',
+        role: 'Data Collector',
+        duration: '2024 (2 months)',
+        description: 'Conducted field data collection for public health research in Balochistan, supporting WHO initiatives to improve healthcare access in underserved communities.'
     },
     {
-        company: 'Vision for Tomorrow',
-        role: 'Project Lead',
-        duration: 'Jun 2021 - Present',
-        description: 'Managing an initiative to provide digital literacy and career counseling to youth in underserved regions of Balochistan.'
+        company: 'Nazir Health Complex',
+        role: 'Social Media Manager & Content Editor',
+        duration: '2 months',
+        description: 'Managed all social media accounts and created visual content including posts, logos, and banners. Played a key role in helping establish this healthcare initiative from the ground up.'
     },
     {
-        company: 'Community Health Camps',
-        role: 'Volunteer Coordinator',
-        duration: 'Mar 2020 - Present',
-        description: 'Organizing and managing volunteers for various health awareness and medical check-up camps in remote areas.'
+        company: 'Community Engagement Projects',
+        role: 'Project Coordinator',
+        duration: 'Ongoing',
+        description: 'Leading multiple grassroots initiatives including school sanitation projects and workshops addressing social issues. Continuously working to improve community health and education outcomes.'
     }
 ];
 
@@ -136,19 +135,17 @@ export const skills: Skill[] = [
 
 export const projects: Project[] = [
   {
-    title: 'Vision for Tomorrow',
-    acronym: 'VFT',
-    description: 'An initiative dedicated to empowering youth through digital literacy and career counseling, bridging the information gap for students in underserved areas.',
-  },
-  {
-    title: 'Vision for Bandata',
-    acronym: 'VFB',
-    description: 'A community-focused project aimed at improving local infrastructure, promoting sustainable practices, and enhancing quality of life in Bandat village.',
-  },
-  {
     title: 'Build Bandat Foundation',
     acronym: 'BBF',
-    description: 'A non-profit foundation focused on long-term development projects in Bandat, covering education, healthcare, and economic empowerment.',
+    description: 'A grassroots-level non-profit foundation working to bring sustainable change to life. Focused on long-term development projects in Bandat, covering education, healthcare, and economic empowerment at the community level.',
+  },
+  {
+    title: 'Field Research Survey Tool',
+    acronym: 'FRST',
+    description: 'Designed and built a custom web-based survey tool to streamline data collection for my Public Health research in Awaran. The platform eliminates the need for paper forms, enables offline use, and stores responses digitally for easier analysis.',
+    date: 'August 2025',
+    imageUrl: '/field-research-tool.png',
+    link: 'https://shahjahanbaloch09.github.io/Data1/#/'
   },
 ];
 
@@ -168,9 +165,9 @@ export const testimonials: Testimonial[] = [
     linkedinUrl: '#',
   },
   {
-    quote: "Working with Shah Jahan on the 'Vision for Tomorrow' project has been a privilege. His passion for digital education and his innovative approach have empowered countless students in our community.",
+    quote: "Working with Shah Jahan on community development projects has been a privilege. His passion for digital education and his innovative approach have empowered countless students in our region.",
     name: 'Fatima Ahmed',
-    title: 'Co-founder, Vision for Tomorrow',
+    title: 'Community Development Coordinator',
     imageUrl: 'https://picsum.photos/seed/person2/100/100',
     linkedinUrl: '#',
   },
@@ -243,7 +240,7 @@ export const blogPosts: BlogPost[] = [
     id: 2,
     title: 'Launching the Build Bandat Foundation: A Dream Realized',
     date: 'September 15, 2023',
-    excerpt: 'The journey from a simple idea to a registered foundation has been incredible. Here’s a look at our mission and what’s next for BBF.',
+    excerpt: 'The journey from a simple idea to a registered foundation has been incredible. Here is a look at our mission and what is next for BBF.',
     imageUrl: 'https://picsum.photos/seed/blog2/400/300',
     content: `
       <p>It began as a conversation, a shared frustration about the lack of resources in our community. That conversation grew into an idea, and today, that idea is a reality: the Build Bandat Foundation (BBF) is officially a registered non-profit organization. The journey has been one of late nights, endless paperwork, and unwavering determination from a small group of dedicated individuals.</p>
@@ -260,7 +257,7 @@ export const blogPosts: BlogPost[] = [
     content: `
       <p>In an age where information is at our fingertips, a significant digital divide still exists, particularly when it comes to health literacy in remote regions. How can we bridge this gap? The answer lies in leveraging the technology that is already becoming ubiquitous: the mobile phone.</p>
       <p>Through initiatives like Vision for Tomorrow (VFT), we are exploring how simple, accessible digital tools can become powerful vehicles for health education. This includes creating WhatsApp-based health awareness groups where verified information about hygiene, nutrition, and disease prevention is shared in the local language. We're also developing short, animated videos that are easy to understand and share, even in low-bandwidth areas.</p>
-      <p>The potential is immense. Technology allows us to bypass traditional barriers of distance and literacy, delivering vital health information directly into the hands of those who need it most. It’s about more than just apps and websites; it’s about creating a digitally connected ecosystem of care that empowers individuals to make informed decisions about their health.</p>
+      <p>The potential is immense. Technology allows us to bypass traditional barriers of distance and literacy, delivering vital health information directly into the hands of those who need it most. It's about more than just apps and websites; it's about creating a digitally connected ecosystem of care that empowers individuals to make informed decisions about their health.</p>
     `,
   }
 ];

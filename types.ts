@@ -22,6 +22,9 @@ export interface Project {
   title: string;
   acronym: string;
   description: string;
+  date?: string;
+  imageUrl?: string;
+  link?: string;
 }
 
 export interface Certificate {
